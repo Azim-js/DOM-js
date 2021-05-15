@@ -21,3 +21,23 @@ console.log(document.forms);
 console.log(document.links);
 console.log(document.forms[0]);
 
+// GET ELEMENT BY ID
+
+console.log(document.getElementById('header-title'));
+
+var headertitle=document.getElementById('header-title');
+
+// headertitle.textContent="Hello";
+
+// headertitle.innerText="Goodbye";
+
+// console.log(headertitle.innerText);
+
+// headertitle.title.innerHTML='<h3> Hello</h3>';
+
+var header=document.getElementById("main-header");
+
+// STYLE CHANGES
+
+header.style.borderBottom='solid 3px #000';
+
