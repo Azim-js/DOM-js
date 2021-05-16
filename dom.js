@@ -205,3 +205,40 @@ var h1=document.querySelector('header h1');
 newDiv.style.fontSIze='30px';
 
 container.insertBefore(newDiv,h1);
+
+
+var button=document.getElementById('button');
+
+// button.addEventListener('click',function(){
+//     console.log(123);
+// })
+
+button.addEventListener('click',buttonClick);
+
+// function buttonClick(){
+//     document.getElementById('header-title').textContent='Changed';
+//     document.querySelector('#main').style.backgroundColor='#f4f4f4'
+// }
+
+function buttonClick(e){
+    console.log(e);
+    console.log(e.target);
+    console.log(e.target.id);
+    console.log(e.target.className);
+    console.log(e.target.classList);
+
+    var output=document.getElementById('output');
+
+    output.innerHTML='<h3>'+e.target.id+'</h3>';
+    console.log(e.type);
+    console.log(e.clientX);
+    console.log(e.clientY);
+    console.log(e.offsetX);
+    console.log(e.offsetY);
+
+
+    console.log(e.altKey); //when pressed and click ->true
+    console.log(e.ctrlKey); //when pressed and click ->true
+    console.log(e.shiftKey); //when pressed and click ->true
+
+}
