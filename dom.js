@@ -169,4 +169,39 @@ itemList.previousElementSibling.style.color='green';
 
 
 
+// CREATING DOM FROM JS
 
+// create a div
+
+var newDiv=document.createElement('div');
+
+// add class
+newDiv.className='hello';
+
+// add id 
+newDiv.id='hello1';
+
+// add attribute
+
+newDiv.setAttribute('title','Hello Div');
+
+console.log(newDiv);
+
+// createTextNode
+
+var newDivText=document.createTextNode('HelloWorld');
+// add textto div
+
+
+newDiv.appendChild(newDivText);
+console.log(newDiv);
+
+// insertBefore
+
+var container=document.querySelector('header .container');
+
+var h1=document.querySelector('header h1');
+
+newDiv.style.fontSIze='30px';
+
+container.insertBefore(newDiv,h1);
