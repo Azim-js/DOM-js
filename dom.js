@@ -150,4 +150,23 @@ console.log(itemList.lastChild);
 console.log(itemList.lastElementChild);
 itemList.lastElementChild.textContent="Hello4";
 
+// NEXT SIBLING
+
+console.log(itemList.nextSibling);
+
+// nextELementSibling
+
+console.log(itemList.nextElementSibling);
+
+// previous Sibling
+
+console.log(itemList.previousSibling);
+
+// previousELEMENTSIBLING
+
+console.log(itemList.previousElementSibling);
+itemList.previousElementSibling.style.color='green';
+
+
+
 
