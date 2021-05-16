@@ -113,3 +113,41 @@ for(var i=0;i<odd.length;i++){
     even[i].style.backgroundColor="#ccc";
     
 }
+
+
+// Traversing The DOM
+
+var itemList=document.querySelector('#items');
+console.log(itemList.parentNode);
+
+itemList.parentNode.style.backgroundColor="#f4f4f4";
+
+// parentElement
+
+console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor='#f4f4f4';
+console.log(itemList.parentElement.parentElement);
+
+
+// CHILD NODES
+
+console.log(itemList.childNodes);
+console.log(itemList.children);
+console.log(itemList.children[1]);
+itemList.children[1].style.backgroundColor='yellow';
+
+// first Child
+
+console.log(itemList.firstElementChild);
+itemList.firstElementChild.textContent="hello2";
+
+// last child
+
+console.log(itemList.lastChild);
+
+// lastElement Child
+
+console.log(itemList.lastElementChild);
+itemList.lastElementChild.textContent="Hello4";
+
+
