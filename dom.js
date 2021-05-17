@@ -313,3 +313,16 @@ function runEventFour(e){
     // document.body.style="none";
 }
 
+// selection events
+
+var select =document.querySelector('select');
+
+select.addEventListener('change',runEventFive);
+select.addEventListener('input',runEventFive);
+
+function runEventFive(e){
+    console.log("event Type: "+e.type);
+    console.log(e.target.value);
+
+}
+
