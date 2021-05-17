@@ -326,3 +326,11 @@ function runEventFive(e){
 
 }
 
+// submiting forms
+
+form.addEventListener('submit',runEventSix);
+
+function runEventSix(e){
+    e.preventDefault();
+    console.log('event type'+e.type);
+}
