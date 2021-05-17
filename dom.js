@@ -207,13 +207,13 @@ newDiv.style.fontSIze='30px';
 container.insertBefore(newDiv,h1);
 
 
-var button=document.getElementById('button');
+// var button=document.getElementById('button');
 
 // button.addEventListener('click',function(){
 //     console.log(123);
 // })
 
-button.addEventListener('click',buttonClick);
+// button.addEventListener('click',buttonClick);
 
 // function buttonClick(){
 //     document.getElementById('header-title').textContent='Changed';
@@ -242,3 +242,41 @@ function buttonClick(e){
     console.log(e.shiftKey); //when pressed and click ->true
 
 }
+
+
+
+// MOUSE ACTIONS
+
+var btn=document.getElementById('button');
+
+btn.addEventListener('click',runEvent);
+// double click
+btn.addEventListener('dblclick',runEvent);
+
+btn.addEventListener('mousedown',runEvent);
+btn.addEventListener('mouseup',runEvent);
+
+function runEvent(e){
+    console.log("Event Type:"+e.type);
+}
+
+// mouse events demo
+
+var box=document.getElementById('box');
+
+box.addEventListener('mouseenter',runEventTwo);
+
+box.addEventListener('mouseleave',runEventTwo);
+box.addEventListener('mouseout',runEventTwo);
+
+box.addEventListener('mousemove',runEventTwo);
+
+function runEventTwo(e){
+    console.log('EventType :'+e.type);
+    output.innerHTML='<h3>MoveX : '+e.offsetX+'</h3><h3> MouseY : '+e.offsetY+'</h3>';
+
+    // box.style.backgroundColor="rgb("+e.offsetX+","+e.offsetY+",50)";
+    //  change color on mouse event
+    document.body.style.backgroundColor="rgb("+e.offsetX+","+e.offsetY+",50)";
+}
+
