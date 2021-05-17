@@ -300,5 +300,16 @@ function runEventThree(e){
     
 }
 
+// focus -> click events
 
+itemInput.addEventListener('focus',runEventFour);
+itemInput.addEventListener('cut',runEventFour);
+itemInput.addEventListener('blur',runEventFour);
+itemInput.addEventListener('paste',runEventFour);
+itemInput.addEventListener('input',runEventFour);
+
+function runEventFour(e){
+    console.log("eventType: "+e.type);
+    // document.body.style="none";
+}
 
