@@ -280,3 +280,25 @@ function runEventTwo(e){
     document.body.style.backgroundColor="rgb("+e.offsetX+","+e.offsetY+",50)";
 }
 
+
+// EXTRA EVENTS
+
+var itemInput=document.querySelector("Input[type='text']");
+
+var form=document.querySelector('form');
+
+itemInput.addEventListener('keydown',runEventThree);
+itemInput.addEventListener('keypress',runEventThree);
+itemInput.addEventListener('keyup',runEventThree);
+
+function runEventThree(e){
+    console.log('eventType: '+e.type);
+    console.log(e.target.value);
+
+    document.getElementById('output').innerHtml='<h3>'+e.target.value+'</h3>';
+
+    
+}
+
+
+
